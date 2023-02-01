@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.sidebar {
+  position: fixed;
+  left: 0px;
+  width: 250px;
+  height: 100%;
+  background: #000000;
+  transition: all .5s ease;
+}
+.sidebar h2 {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #000000;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #ff00b3;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 250px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: 195px;
+  top: 17px;
+  font-size: 30px;
+  color: #fcfcfc;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: -250px;
+}
+#check:checked ~ label #btn{
+  left: 0px;
+  top: 0px;
+  opacity: 1;
+  pointer-events: auto;
+}
+#check:checked ~ label #cancel{
+  left: -195px;
+}
+#check:checked ~ section{
+  margin-left: 0px;
+}
+
+header {
+  width: 100%;
+  background: #000000;
+  height: 70px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: white;
+}
+
+.profile {
+  margin-right: 20px;
+}
+
+.main-content {
+  margin: 20px;
+  margin-left: 270px;
+  margin-top: 150px;
+  text-align: center;
+}
+
+.main-content table {
+  width: 100%;
+}
+
+.main-content td{
+  padding: 10px;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(226, 214, 214, 0.2);
+  padding: 12px 10px;
+  z-index: 1;
+}
+
+.dropdown-content a{
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+td a{
+  padding: 10px;
+  color: black;
+}
